@@ -1,0 +1,40 @@
+---
+name: XML-Grammar-Fortune-Synd
+version: 0.01
+author:
+  - 'Shlomi Fish <shlomif@cpan.org>'
+abstract: |-
+  Provides syndication for a set of 
+  XML-Grammar-Fortune files.
+license: mit
+resources:
+  license: http://opensource.org/licenses/mit-license.php
+requires:
+  Class::Accessor: 0
+  DateTime::Format::W3CDTF: 0
+  Exporter: 0
+  File::Spec: 0
+  Getopt::Long: 0
+  Heap::Binary: 0
+  Heap::Elem::Ref: 0
+  XML::Feed: 0
+  XML::Grammar::Fortune: 0
+  YAML::Syck: 0
+  base: 0
+  strict: 0
+  vars: 0
+  warnings: 0
+build_requires:
+  Test::More: 0
+provides:
+  XML::Grammar::Fortune::Synd:
+    file: lib/XML/Grammar/Fortune/Synd.pm
+    version: 0.01
+  XML::Grammar::Fortune::Synd::App:
+    file: lib/XML/Grammar/Fortune/Synd/App.pm
+  XML::Grammar::Fortune::Synd::Heap::Elem:
+    file: lib/XML/Grammar/Fortune/Synd/Heap/Elem.pm
+generated_by: Module::Build version 0.2808
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2

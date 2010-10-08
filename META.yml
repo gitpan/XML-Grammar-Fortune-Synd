@@ -1,14 +1,25 @@
 ---
-name: XML-Grammar-Fortune-Synd
-version: 0.01
+abstract: "Provides syndication for a set of \nXML-Grammar-Fortune files."
 author:
   - 'Shlomi Fish <shlomif@cpan.org>'
-abstract: |-
-  Provides syndication for a set of 
-  XML-Grammar-Fortune files.
+build_requires:
+  Test::More: 0
+configure_requires:
+  Module::Build: 0.36
+generated_by: 'Module::Build version 0.3607'
 license: mit
-resources:
-  license: http://opensource.org/licenses/mit-license.php
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: XML-Grammar-Fortune-Synd
+provides:
+  XML::Grammar::Fortune::Synd:
+    file: lib/XML/Grammar/Fortune/Synd.pm
+    version: 0.02
+  XML::Grammar::Fortune::Synd::App:
+    file: lib/XML/Grammar/Fortune/Synd/App.pm
+  XML::Grammar::Fortune::Synd::Heap::Elem:
+    file: lib/XML/Grammar/Fortune/Synd/Heap/Elem.pm
 requires:
   Class::Accessor: 0
   DateTime::Format::W3CDTF: 0
@@ -17,24 +28,15 @@ requires:
   Getopt::Long: 0
   Heap::Binary: 0
   Heap::Elem::Ref: 0
+  List::Util: 0
   XML::Feed: 0
   XML::Grammar::Fortune: 0
+  XML::RSS: 1.46
   YAML::Syck: 0
   base: 0
   strict: 0
   vars: 0
   warnings: 0
-build_requires:
-  Test::More: 0
-provides:
-  XML::Grammar::Fortune::Synd:
-    file: lib/XML/Grammar/Fortune/Synd.pm
-    version: 0.01
-  XML::Grammar::Fortune::Synd::App:
-    file: lib/XML/Grammar/Fortune/Synd/App.pm
-  XML::Grammar::Fortune::Synd::Heap::Elem:
-    file: lib/XML/Grammar/Fortune/Synd/Heap/Elem.pm
-generated_by: Module::Build version 0.2808
-meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.2.html
-  version: 1.2
+resources:
+  license: http://www.opensource.org/licenses/mit-license.php
+version: 0.02

@@ -15,7 +15,7 @@ WriteMakefile
                            'List::Util' => 0,
                            'Test::More' => 0,
                            'XML::Feed' => 0,
-                           'XML::Grammar::Fortune' => 0,
+                           'XML::Grammar::Fortune' => '0.0400',
                            'XML::RSS' => '1.46',
                            'YAML::Syck' => 0,
                            'base' => 0,

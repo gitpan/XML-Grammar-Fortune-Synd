@@ -10,11 +10,11 @@ XML-Grammar-Fortune files.
 
 =head1 VERSION
 
-Version 0.0201
+Version 0.0202
 
 =cut
 
-our $VERSION = '0.0201';
+our $VERSION = '0.0202';
 
 use base 'Class::Accessor';
 
@@ -141,6 +141,21 @@ sub calc_feeds
         my @ids = (map { $_->getAttribute("id") } @fortune_elems);
 
         my $id_count = 1;
+
+        # Get rid of IDs in the hash refs that don't exist in the file,
+        # so we won't have globally duplicate IDs.
+        {
+            my $hash_ref = $scripts_hash->{$file}; 
+            my %ids_map = (map { $_ => 1 } @ids);
+
+            foreach my $id (keys(%$hash_ref))
+            {
+                if (! exists($ids_map{$id}))
+                {
+                    delete ($hash_ref->{$id});
+                }
+            }
+        }
 
         IDS_LOOP:
         foreach my $id (@ids)

@@ -15,7 +15,7 @@ name: XML-Grammar-Fortune-Synd
 provides:
   XML::Grammar::Fortune::Synd:
     file: lib/XML/Grammar/Fortune/Synd.pm
-    version: 0.0202
+    version: 0.0203
   XML::Grammar::Fortune::Synd::App:
     file: lib/XML/Grammar/Fortune/Synd/App.pm
   XML::Grammar::Fortune::Synd::Heap::Elem:
@@ -39,4 +39,4 @@ requires:
   warnings: 0
 resources:
   license: http://www.opensource.org/licenses/mit-license.php
-version: 0.0202
+version: 0.0203

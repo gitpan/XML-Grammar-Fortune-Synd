@@ -5,9 +5,9 @@ author:
 build_requires:
   Test::More: 0
 configure_requires:
-  Module::Build: 0.40
+  Module::Build: 0.39
 dynamic_config: 1
-generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Module::Build version 0.3901, CPAN::Meta::Converter version 2.120921'
 license: mit
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -16,10 +16,10 @@ name: XML-Grammar-Fortune-Synd
 provides:
   XML::Grammar::Fortune::Synd:
     file: lib/XML/Grammar/Fortune/Synd.pm
-    version: 0.0204
+    version: 0.0206
   XML::Grammar::Fortune::Synd::App:
     file: lib/XML/Grammar/Fortune/Synd/App.pm
-    version: 0.0204
+    version: 0.0206
   XML::Grammar::Fortune::Synd::Heap::Elem:
     file: lib/XML/Grammar/Fortune/Synd/Heap/Elem.pm
     version: 0.0204
@@ -35,11 +35,11 @@ requires:
   XML::Feed: 0
   XML::Grammar::Fortune: 0.0506
   XML::RSS: 1.46
-  YAML::Syck: 0
+  YAML::XS: 0
   base: 0
   strict: 0
   vars: 0
   warnings: 0
 resources:
   license: http://www.opensource.org/licenses/mit-license.php
-version: 0.0204
+version: 0.0206

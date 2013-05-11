@@ -5,20 +5,20 @@ use strict;
 
 =head1 NAME
 
-XML::Grammar::Fortune::Synd - Provides syndication for a set of 
+XML::Grammar::Fortune::Synd - Provides syndication for a set of
 XML-Grammar-Fortune files.
 
 =head1 VERSION
 
-Version 0.0204
+Version 0.0206
 
 =cut
 
-our $VERSION = '0.0204';
+our $VERSION = '0.0206';
 
 use base 'Class::Accessor';
 
-use YAML::Syck;
+use YAML::XS (qw( DumpFile LoadFile ));
 use Heap::Elem::Ref (qw(RefElem));
 use Heap::Binary;
 use XML::Feed;
@@ -145,7 +145,7 @@ sub calc_feeds
         # Get rid of IDs in the hash refs that don't exist in the file,
         # so we won't have globally duplicate IDs.
         {
-            my $hash_ref = $scripts_hash->{$file}; 
+            my $hash_ref = $scripts_hash->{$file};
             my %ids_map = (map { $_ => 1 } @ids);
 
             foreach my $id (keys(%$hash_ref))
@@ -219,7 +219,10 @@ sub calc_feeds
         $feed->link($args->{feed_params}->{'link'});
         $feed->tagline($args->{feed_params}->{'tagline'});
         $feed->author($args->{feed_params}->{'author'});
-        $feed->self_link($args->{feed_params}->{'atom_self_link'});
+
+        my $self_link = $args->{feed_params}->{'atom_self_link'};
+        $feed->self_link($self_link);
+        $feed->id($self_link);
     }
 
     # Now fill the XML-Feed object:
@@ -246,22 +249,22 @@ sub calc_feeds
                     $callback->($entry);
                 }
             };
-            
+
             $on_entries->(sub {
                 my $entry = shift;
 
                 $entry->title($title);
                 $entry->summary($title);
             });
-                
+
             my $url =
                 $self->url_callback()->(
-                    $self, 
+                    $self,
                     {
                         id_obj => $id_obj,
                     }
                 );
-            
+
             $on_entries->(sub {
                 my $entry = shift;
 
@@ -323,6 +326,14 @@ sub calc_feeds
     }
 
     $feeds{"RSS"}->self_link($args->{feed_params}->{'rss_self_link'});
+
+    {
+        my $num_entries = scalar (() = $feeds{'RSS'}->entries());
+        if ($num_entries > $ids_limit)
+        {
+            die "Assert failed. $num_entries rather than the $ids_limit limit.";
+        }
+    }
 
     return
     {

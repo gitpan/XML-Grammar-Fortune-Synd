@@ -4,7 +4,7 @@
       "Shlomi Fish <shlomif@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.3901, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Module::Build version 0.4005, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "mit"
    ],
@@ -21,7 +21,7 @@
       },
       "configure" : {
          "requires" : {
-            "Module::Build" : "0.39"
+            "Module::Build" : "0.36"
          }
       },
       "runtime" : {
@@ -48,15 +48,15 @@
    "provides" : {
       "XML::Grammar::Fortune::Synd" : {
          "file" : "lib/XML/Grammar/Fortune/Synd.pm",
-         "version" : "0.0206"
+         "version" : "0.0207"
       },
       "XML::Grammar::Fortune::Synd::App" : {
          "file" : "lib/XML/Grammar/Fortune/Synd/App.pm",
-         "version" : "0.0206"
+         "version" : "0.0207"
       },
       "XML::Grammar::Fortune::Synd::Heap::Elem" : {
          "file" : "lib/XML/Grammar/Fortune/Synd/Heap/Elem.pm",
-         "version" : "0.0204"
+         "version" : "0.0207"
       }
    },
    "release_status" : "stable",
@@ -65,5 +65,5 @@
          "http://www.opensource.org/licenses/mit-license.php"
       ]
    },
-   "version" : "0.0206"
+   "version" : "0.0207"
 }

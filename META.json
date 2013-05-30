@@ -48,15 +48,15 @@
    "provides" : {
       "XML::Grammar::Fortune::Synd" : {
          "file" : "lib/XML/Grammar/Fortune/Synd.pm",
-         "version" : "0.0208"
+         "version" : "0.0209"
       },
       "XML::Grammar::Fortune::Synd::App" : {
          "file" : "lib/XML/Grammar/Fortune/Synd/App.pm",
-         "version" : "0.0208"
+         "version" : "0.0209"
       },
       "XML::Grammar::Fortune::Synd::Heap::Elem" : {
          "file" : "lib/XML/Grammar/Fortune/Synd/Heap/Elem.pm",
-         "version" : "0.0208"
+         "version" : "0.0209"
       }
    },
    "release_status" : "stable",
@@ -65,5 +65,5 @@
          "http://www.opensource.org/licenses/mit-license.php"
       ]
    },
-   "version" : "0.0208"
+   "version" : "0.0209"
 }

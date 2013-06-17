@@ -18,6 +18,7 @@ WriteMakefile
                    'XML::Grammar::Fortune' => '0.0506',
                    'XML::RSS' => '1.46',
                    'YAML::XS' => 0,
+                   'autodie' => 0,
                    'base' => 0,
                    'strict' => 0,
                    'vars' => 0,

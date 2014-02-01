@@ -3,6 +3,8 @@ package XML::Grammar::Fortune::Synd;
 use warnings;
 use strict;
 
+use 5.008;
+
 =head1 NAME
 
 XML::Grammar::Fortune::Synd - Provides syndication for a set of
@@ -10,11 +12,11 @@ XML-Grammar-Fortune files.
 
 =head1 VERSION
 
-Version 0.0210
+Version 0.0211
 
 =cut
 
-our $VERSION = '0.0210';
+our $VERSION = '0.0211';
 
 use base 'Class::Accessor';
 

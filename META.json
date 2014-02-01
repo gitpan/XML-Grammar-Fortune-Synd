@@ -4,7 +4,7 @@
       "Shlomi Fish <shlomif@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4005, CPAN::Meta::Converter version 2.131560",
+   "generated_by" : "Module::Build version 0.4007, CPAN::Meta::Converter version 2.132830",
    "license" : [
       "mit"
    ],
@@ -40,6 +40,7 @@
             "XML::RSS" : "1.46",
             "YAML::XS" : "0",
             "base" : "0",
+            "perl" : "5.008",
             "strict" : "0",
             "vars" : "0",
             "warnings" : "0"
@@ -49,22 +50,25 @@
    "provides" : {
       "XML::Grammar::Fortune::Synd" : {
          "file" : "lib/XML/Grammar/Fortune/Synd.pm",
-         "version" : "0.0210"
+         "version" : "0.0211"
       },
       "XML::Grammar::Fortune::Synd::App" : {
          "file" : "lib/XML/Grammar/Fortune/Synd/App.pm",
-         "version" : "0.0210"
+         "version" : "0.0211"
       },
       "XML::Grammar::Fortune::Synd::Heap::Elem" : {
          "file" : "lib/XML/Grammar/Fortune/Synd/Heap/Elem.pm",
-         "version" : "0.0210"
+         "version" : "0.0211"
       }
    },
    "release_status" : "stable",
    "resources" : {
       "license" : [
          "http://www.opensource.org/licenses/mit-license.php"
-      ]
+      ],
+      "repository" : {
+         "url" : "https://bitbucket.org/shlomif/fortune-xml"
+      }
    },
-   "version" : "0.0210"
+   "version" : "0.0211"
 }
